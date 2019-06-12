@@ -15,6 +15,7 @@
 - Use Laravel and Vue.js
 - Use CSS preprocessor (SCSS preferred).
 - Use a Javascript task-runner Webpack
+- Comment box design should be as close to example as possible
 
 ## Few tips
 - We always prefer the code that is robust, easy to read and re-usable

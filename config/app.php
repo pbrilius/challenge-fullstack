@@ -12,7 +12,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'fullstack-challenge'),
+    'name' => env('APP_NAME', 'challenge-fullstack'),
 
     /*
     |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost.fullstack-challenge'),
+    'url' => env('APP_URL', 'http://localhost.challenge-fullstack'),
 
     'asset_url' => env('ASSET_URL', null),
 

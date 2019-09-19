@@ -42,7 +42,9 @@ class LoginController extends Controller
      */
     public function redirectToProvider()
     {
-        return Socialite::driver('twitter')->redirect();
+        return Socialite::driver('twitter')
+            ->scopes(['read:user', 'public_repo'])
+            ->redirect();
     }
 
     /**
@@ -54,6 +56,20 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('twitter')->user();
 
-        // $user->token;
+        // OAuth Two Providers
+        $token = $user->token;
+        $refreshToken = $user->refreshToken; // not always provided
+        $expiresIn = $user->expiresIn;
+
+        // OAuth One Providers
+        $token = $user->token;
+        $tokenSecret = $user->tokenSecret;
+
+        // All Providers
+        $user->getId();
+        $user->getNickname();
+        $user->getName();
+        $user->getEmail();
+        $user->getAvatar();
     }
 }

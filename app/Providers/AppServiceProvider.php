@@ -19,7 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('social-auth.continue-with-fb', 'fb');
-        Blade::component('social-auth.facebook', 'fbBtn');
+        Blade::component('social-auth.continue-with-fb', 'fbBtn');
+        Blade::component('social-auth.facebook', 'fb');
     }
 }

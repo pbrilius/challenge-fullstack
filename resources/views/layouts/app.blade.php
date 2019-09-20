@@ -43,11 +43,12 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                @component('social-auth.continue-with-fb')
+                                    test component item
+                                @endcomponent
                             </li>
                             <li class="nav-item">
-                                @fbBtn
-                                @endfbBtn
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
@@ -82,5 +83,6 @@
             @yield('content')
         </main>
     </div>
+    @stack('scripts')
 </body>
 </html>
